@@ -134,5 +134,6 @@ public class Cart {
 	public static void main(String[] args) {
 		Cart cart = new Cart();
 		cart.goToCart(4,8);
+		System.out.println("Changes made in Cart");
 	}
 }
