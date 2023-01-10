@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Admin extends ConnectionConnectivity{
+	
 	Scanner scanner = new Scanner(System.in);
+	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
 	private String username;
@@ -25,6 +27,9 @@ public class Admin extends ConnectionConnectivity{
 		this.password = password;
 	}
 	public void adminLogin(){
+		
+		System.out.println("***********************");
+		System.out.println("this is new changes in file");
 		System.out.println("Enter Username");
 		username=scanner.next();
 		try {
