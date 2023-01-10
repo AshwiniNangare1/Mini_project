@@ -17,6 +17,7 @@ public class Aquarium {
 	{
 		System.out.println("Enter 1 if you want to buy fish");
 		System.out.println("Enter 2 if you want to buy Aquerium plant");
+		System.out.println("/n");
 		int choice =scanner.nextInt();
 		if(choice == 1){
 			Aquariumfish(customer_id);
@@ -86,7 +87,7 @@ public class Aquarium {
 		public void getcases(int customer_id) throws SQLException
 		{
 			try {
-				System.out.print("\nEnter the product name >> ");
+				System.out.print("Enter the product name >> ");
 				scanner.nextLine();
 				String choose_product_name = scanner.nextLine();
 				connection= connectionConnectivity.getConnection();
