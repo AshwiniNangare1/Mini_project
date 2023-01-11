@@ -45,6 +45,7 @@ public class Cart {
 			System.out.println(quantity +" " + product_name +" is added to the cart \n");	
 			System.out.println("Enter 1 if you want to go to your cart for payment");
 			System.out.println("Enter 2 if you want to go to main menu");
+			System.out.println("Enter 3 if corrections made in same branch same package and different class");
 			int num2=scanner.nextInt();
 			switch(num2) {
 			case 1:
