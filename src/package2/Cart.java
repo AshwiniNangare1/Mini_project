@@ -1,10 +1,12 @@
-package com.velocity.miniProject;
+package package2;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import package1.Aquarium;
 
 public class Cart {
 	ConnectionConnectivity connectionConnectivity = new ConnectionConnectivity();
