@@ -42,9 +42,12 @@ public class Cart {
 			preparedStatement.setInt(5, product_price );
 			preparedStatement.setInt(6, quantity);
 			preparedStatement.executeUpdate();
-			System.out.println(quantity +" " + product_name +" is added to the cart \n");	
+			System.out.println(quantity +" " + product_name +" is added to the cart \n");
+			
 			System.out.println("Enter 1 if you want to go to your cart for payment");
+			
 			System.out.println("Enter 2 if you want to go to main menu");
+			
 			System.out.println("Enter 3 if corrections made in same branch same package and different class");
 			int num2=scanner.nextInt();
 			switch(num2) {
@@ -65,7 +68,7 @@ public class Cart {
 		scanner.close();
 	}
 	public void goToCart(int customer_id,int product_id) {
-		try {
+		try(PreparedStatement preparestatement=null) {
 			connection = connectionConnectivity.getConnection();
 			preparedStatement =connection.prepareStatement("select COUNT(customer_id) from purchase_history where customer_id =? ");
 			preparedStatement.setInt(1, customer_id);
