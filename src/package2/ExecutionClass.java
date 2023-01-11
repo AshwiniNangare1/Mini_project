@@ -9,5 +9,6 @@ public class ExecutionClass {
 		LogIn logIn = new LogIn();
 		logIn.mainPage();
 		System.out.println("same package with different class");
+		System.out.println("confilts should be arrive");
 	}
 }
