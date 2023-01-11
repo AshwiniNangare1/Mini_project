@@ -28,7 +28,8 @@ public class Admin extends ConnectionConnectivity{
 	}
 	public void adminLogin(){
 		
-		System.out.println("***********************");
+		
+		System.out.println("/n");
 		System.out.println("this is new changes in file");
 		System.out.println("Enter Username");
 		username=scanner.next();
