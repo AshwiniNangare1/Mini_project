@@ -1,4 +1,4 @@
-package com.velocity.miniProject;
+package package2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

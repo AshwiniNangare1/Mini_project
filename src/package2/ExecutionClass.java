@@ -1,5 +1,7 @@
-package com.velocity.miniProject;
+package package2;
 import java.sql.SQLException;
+
+import com.velocity.miniProject.LogIn;
 public class ExecutionClass {
 	public static void main(String[] args) throws SQLException {
 

@@ -1,10 +1,12 @@
-package com.velocity.miniProject;
+package package1;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
+
+import package2.ConnectionConnectivity;
 
 public class Admin extends ConnectionConnectivity{
 	
@@ -82,6 +84,9 @@ public class Admin extends ConnectionConnectivity{
 	    case 3:
 		   checkUserHistory();   
 		break;
+	    case 4:
+			   checkUserHistory();   
+			break;
 	    default :
 		   System.out.println("Enter a valid input");
 		   adminHomePage();
@@ -162,6 +167,7 @@ public void checkUserHistory() throws SQLException {
 					int quantity = result.getInt("product_quantity");
 					System.out.println("product quantity >> " + quantity);
 				}
+				System.out.println("new changes in admin");
 			}
 		}catch(Exception e) {
 			System.out.println(e);
