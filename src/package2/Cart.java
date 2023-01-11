@@ -19,8 +19,8 @@ public class Cart {
 		int product_price = 0;
 		Scanner scanner = new Scanner(System.in);
 		try {
-			connection = connectionConnectivity.getConnection();
-			preparedStatement=connection.prepareStatement("select * from customers where customer_id =?");
+			Connection connection = connectionConnectivity.getConnection();
+			PreparedStatement preparedStatement=connection.prepareStatement("select * from customers where customer_id =?");
 			preparedStatement.setInt(1, customer_id);
 			ResultSet resultSet=preparedStatement.executeQuery();
 			while (resultSet.next()){
