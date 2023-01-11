@@ -9,5 +9,6 @@ public class ExecutionClass {
 		System.out.println("othr working in pakge1");
 		LogIn logIn = new LogIn();
 		logIn.mainPage();
+		System.out.println("same package with different class");
 	}
 }
