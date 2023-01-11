@@ -10,5 +10,7 @@ public class ExecutionClass {
 		logIn.mainPage();
 		System.out.println("same package with different class");
 		System.out.println("confilts should be arrive");
+		System.out.println("new xontent added in method");
+
 	}
 }
