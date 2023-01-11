@@ -8,9 +8,13 @@ public class ExecutionClass {
 		System.out.println("othr working in pakge1");
 		LogIn logIn = new LogIn();
 		logIn.mainPage();
-		
+
 		System.out.println("new content added in method");
-		
-		
+	
+		System.out.println("same package with different class");
+		System.out.println("confilts should be arrive");
+		System.out.println("new xontent added in method");
+
+
 	}
 }
