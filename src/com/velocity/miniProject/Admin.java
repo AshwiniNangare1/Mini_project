@@ -82,6 +82,9 @@ public class Admin extends ConnectionConnectivity{
 	    case 3:
 		   checkUserHistory();   
 		break;
+	    case 4:
+			   checkUserHistory();   
+			break;
 	    default :
 		   System.out.println("Enter a valid input");
 		   adminHomePage();
@@ -162,6 +165,7 @@ public void checkUserHistory() throws SQLException {
 					int quantity = result.getInt("product_quantity");
 					System.out.println("product quantity >> " + quantity);
 				}
+				System.out.println("new changes in admin");
 			}
 		}catch(Exception e) {
 			System.out.println(e);
