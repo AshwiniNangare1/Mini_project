@@ -1,10 +1,14 @@
-package com.velocity.miniProject;
+package package2;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import package1.Aquarium;
+
+
 
 public class Cart {
 	ConnectionConnectivity connectionConnectivity = new ConnectionConnectivity();
@@ -17,8 +21,8 @@ public class Cart {
 		int product_price = 0;
 		Scanner scanner = new Scanner(System.in);
 		try {
-			connection = connectionConnectivity.getConnection();
-			preparedStatement=connection.prepareStatement("select * from customers where customer_id =?");
+			Connection connection = connectionConnectivity.getConnection();
+			PreparedStatement preparedStatement=connection.prepareStatement("select * from customers where customer_id =?");
 			preparedStatement.setInt(1, customer_id);
 			ResultSet resultSet=preparedStatement.executeQuery();
 			while (resultSet.next()){
@@ -40,9 +44,13 @@ public class Cart {
 			preparedStatement.setInt(5, product_price );
 			preparedStatement.setInt(6, quantity);
 			preparedStatement.executeUpdate();
-			System.out.println(quantity +" " + product_name +" is added to the cart \n");	
+			System.out.println(quantity +" " + product_name +" is added to the cart \n");
+			
 			System.out.println("Enter 1 if you want to go to your cart for payment");
+			
 			System.out.println("Enter 2 if you want to go to main menu");
+			
+			System.out.println("Enter 3 if corrections made in same branch same package and different class");
 			int num2=scanner.nextInt();
 			switch(num2) {
 			case 1:
@@ -62,7 +70,7 @@ public class Cart {
 		scanner.close();
 	}
 	public void goToCart(int customer_id,int product_id) {
-		try {
+		try(PreparedStatement preparestatement=null) {
 			connection = connectionConnectivity.getConnection();
 			preparedStatement =connection.prepareStatement("select COUNT(customer_id) from purchase_history where customer_id =? ");
 			preparedStatement.setInt(1, customer_id);
