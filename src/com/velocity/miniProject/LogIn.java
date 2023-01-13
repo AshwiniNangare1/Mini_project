@@ -120,7 +120,7 @@ public class LogIn extends ConnectionConnectivity{
 				userLogInSignUp();
 			}
 		}else {
-			System.out.println("Invalid User name please run again");
+			System.out.println("Invalid User name");
 			userLogInSignUp();
 		}
 	}

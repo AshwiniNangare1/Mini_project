@@ -14,7 +14,10 @@ public class ExecutionClass {
 		System.out.println("same package with different class");
 		System.out.println("confilts should be arrive");
 		System.out.println("new xontent added in method");
-
-
+	}
+	public void method () {
+		System.out.println("Line 1");
+		System.out.println("Line 2");
+		System.out.println("Line 3");
 	}
 }
