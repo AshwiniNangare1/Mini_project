@@ -16,8 +16,8 @@ public class Cart {
 	PreparedStatement preparedStatement = null;
 	Scanner scanner = new Scanner(System.in);
 	public void addToCart(int customer_id,int product_id,int quantity) {
-		String customer_name ="";
-		String product_name = "";
+		String customer_name ="aniket";
+		String product_name ="acquriam plant";
 		int product_price = 0;
 		Scanner scanner = new Scanner(System.in);
 		try {
